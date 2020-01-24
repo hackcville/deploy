@@ -1,0 +1,13 @@
+<h1>Dwitter</h1>
+<br />
+
+{% if dweets %}
+  <h2>Recent dweets:</h2>
+  <ul>
+  {% for dweet in dweets %}
+      <p>{{ dweet }}</p>
+  {% endfor %}
+  </ul>
+{% else %}
+  <h2>No dweets are available :(</h2>
+{% endif %}
