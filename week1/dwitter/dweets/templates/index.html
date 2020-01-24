@@ -18,6 +18,10 @@
       .footer {
         padding: 20px;
       }
+      .dweet {
+        width: 500px;
+        margin-bottom: 30px;
+      }
     </style>
   </head>
   <body>
@@ -30,12 +34,22 @@
       <br />
       <div class="container">
         {% if page_obj %}
-          <h2>Recent dweets:</h2>
-          <ul>
           {% for dweet in page_obj %}
-              <p>{{ dweet }}</p>
+            <div class="card dweet">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">{{ dweet.user }}</p>
+                  </div>
+                </div>
+                <div class="content">
+                  {{ dweet.message }}
+                  <br /><br />
+                  {{ dweet.date }}
+                </div>
+              </div>
+            </div>
           {% endfor %}
-          </ul>
         {% else %}
           <h2>No dweets are available :(</h2>
         {% endif %}
