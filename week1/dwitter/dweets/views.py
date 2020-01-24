@@ -53,3 +53,26 @@ def post(request):
             'success': True,
             'message': 'Succesfully posted the dweet!'
         })
+
+
+def dweets(request):
+    if request.method == 'GET':
+        try:
+            count = int(request.GET.get('count'))
+        except:
+            count = 5
+
+        data = Dweet.objects.order_by('-date')[:count]
+
+        dweets = []
+        for dweet in data:
+            dweets.append({
+                'user': dweet.user.name,
+                'message': dweet.message,
+                'date': dweet.date
+            })
+
+        return JsonResponse({
+            'success': True,
+            'data': dweets
+        })
