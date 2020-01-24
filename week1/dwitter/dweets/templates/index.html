@@ -6,26 +6,71 @@
     <title>Hello Dwitter!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      main {
+        flex: 1;
+      }
+      .footer {
+        padding: 20px;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <section class="hero is-primary is-bold">
+    <main class="content">
+      <section class="hero is-info is-bold">
         <div class="hero-body">
           <h1 class="title">Dwitter</h1>
         </div>
       </section>
       <br />
-      
-      {% if dweets %}
-        <h2>Recent dweets:</h2>
-        <ul>
-        {% for dweet in dweets %}
-            <p>{{ dweet }}</p>
-        {% endfor %}
-        </ul>
-      {% else %}
-        <h2>No dweets are available :(</h2>
+      <div class="container">
+        {% if page_obj %}
+          <h2>Recent dweets:</h2>
+          <ul>
+          {% for dweet in page_obj %}
+              <p>{{ dweet }}</p>
+          {% endfor %}
+          </ul>
+        {% else %}
+          <h2>No dweets are available :(</h2>
+        {% endif %}
+      </div>  
+    </main>
+
+    <nav class="footer pagination">
+      {% if page_obj.has_previous %}
+        <a
+          class="pagination-previous"
+          href="?page={{ page_obj.previous_page_number }}"
+        >
+          Previous
+        </a>
       {% endif %}
-    </div>
+      {% if page_obj.has_next %}
+        <a
+          class="pagination-next"
+          href="?page={{ page_obj.next_page_number }}"
+        >
+          Next
+        </a>
+      {% endif %}
+      <ul class="pagination-list">
+        {% for page in page_obj.paginator.page_range %}
+        <li>
+          <a
+            class="pagination-link {% if page_obj.number == page %}is-current{% endif %}"
+            href="?page={{ page }}"
+          >
+            {{ page }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
   </body>
 </html>

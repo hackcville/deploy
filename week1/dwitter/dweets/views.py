@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.core.paginator import Paginator
 from django.views.decorators.csrf import csrf_exempt
 import json
 from jsonschema import validate
@@ -10,7 +11,11 @@ from .models import Dweet, User
 
 def index(request):
     dweets = Dweet.objects.order_by('-date')
-    return render(request, 'index.html', {'dweets': dweets})
+    paginator = Paginator(dweets, 10)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    return render(request, 'index.html', {'page_obj': page_obj})
 
 
 schema_post = {
