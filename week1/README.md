@@ -55,7 +55,7 @@ def sms_reply():
 
 We have built and deployed a server that will aggregate all posted dweets and display them in one page. It also acts as an API that your service will interact with to post and retrieve dweets (see the endpoint reference below. You can set the username to any username you want. One possible strategy is to use the phone number interacting with your API which Twilio lets you access easily.
 
-Server Url: http://206.189.227.83/
+You can access the server at [dwitter.hackcville.com](http://dwitter.hackcville.com/).
 
 ### API Endpoints
 
