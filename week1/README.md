@@ -36,7 +36,7 @@ Flask is a micro-service framework for Python that makes it super simple to set 
 
 ## Using Twilio
 
-Twilio is a service that lets your programmatically send and receive text messages. The way you use Twilio is by interacting with their public API. The Twilio API abstracts away the whole process of interacting with a cellular service and lets you send SMS messages in under 10 lines of Python code. See the Glitch starter project for an example Twilio usage and see the [Python Quickstart](https://www.twilio.com/docs/sms/quickstart/python) for more example usage. You will need to sign up for a free trial of Twilio before starting this project (don’t worry, there’s no credit card required).
+Twilio is a service that lets your programmatically send and receive text messages. The way you use Twilio is by interacting with their public API. The Twilio API abstracts away the whole process of interacting with a cellular service and lets you send SMS messages in under 10 lines of Python code. See the Glitch starter project for an example Twilio usage and see the [Python Quickstart](https://www.twilio.com/docs/sms/quickstart/python?code-sample=code-reply-to-an-incoming-message-using-twilio-sms) for more example usage. You will need to sign up for a free trial of Twilio before starting this project (don’t worry, there’s no credit card required).
 
 To access the SMS message body and phone number from Flask, use the following code in your route handler:
 
