@@ -118,11 +118,11 @@ Sample response:
 }
 ```
 
+## Submission Requirements
 
+For this project, we we’ll ask each of you to Slack us a link to your Glitch project. A complete solution should let you text a number, have Twilio trigger an endpoint on your Flask server, and then have your server interface with the Dwitter API.
 
-## Submission requirements
-
-For this project, we we’ll ask each of you to Slack us a link to your Glitch project. A complete solution should let you text a number, have Twilio trigger an endpoint on your Flask server, and then have your server interface with the Dwitter API. You should be able to retrieve the 10 most recent dweets and post new dweets from your phone by texting your Twilio number.
+You should be able to retrieve the 3 most recent dweets and post new dweets from your phone by texting your Twilio number. The actual implementation details of this is up to you. For example, you could use the user's phone number as their name.
 
 ## Next Steps
 
