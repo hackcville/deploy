@@ -27,7 +27,11 @@ schema_post = {
         'message': {
             'type': 'string'
         },
-    }
+    },
+    'required': [
+        'user',
+        'message'
+    ]
 }
 
 
