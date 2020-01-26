@@ -53,7 +53,7 @@ def sms_reply():
 
 ## Dwitter API
 
-We have built and deployed a server that will aggregate all posted dweets and display them in one page. It also acts as an API that your service will interact with to post and retrieve dweets (see the [endpoint reference below](#)). You can set the username to any username you want. One possible strategy is to use the phone number interacting with your API which Twilio lets you access easily.
+We have built and deployed a server that will aggregate all posted dweets and display them in one page. It also acts as an API that your service will interact with to post and retrieve dweets (see the endpoint reference below. You can set the username to any username you want. One possible strategy is to use the phone number interacting with your API which Twilio lets you access easily.
 
 ### API Endpoints
 
