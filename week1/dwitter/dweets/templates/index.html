@@ -6,29 +6,9 @@
     <title>Dwitter</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <style>
-      body {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-      }
-      .app-content {
-        flex: 1;
-      }
-      .content-column {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 10px;
-      }
-      .footer {
-        padding: 20px;
-      }
-      .dweet {
-        width: 500px;
-        margin-bottom: 30px;
-      }
-    </style>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static "styles.css" %}">
   </head>
   <body>
     <main class="app-content">
