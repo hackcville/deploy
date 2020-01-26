@@ -57,7 +57,68 @@ We have built and deployed a server that will aggregate all posted dweets and di
 
 ### API Endpoints
 
-TODO: update when server is live
+#### `GET` `/api/dweets`
+
+Returns a specified amount of dweets starting from the newest dweet. Defaults to 5 dweets if count is not specified.
+
+Query params:
+
+| Name    | Type  | Description      |
+| ------- | ----- | ---------------- |
+| `count` | `int` | Number of dweets |
+
+Sample request: `/api/dweets?count=2`
+
+Sample response:
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "user": "Jim Ryan",
+      "message": "Deploy is my favorite course at HackCville",
+      "date": "2020-01-26T02:33:27.826Z"
+    },
+    {
+      "user": "Thomas Jefferson",
+      "message": "ayy lmao",
+      "date": "2020-01-26T02:06:47.353Z"
+    }
+  ]
+}
+```
+
+#### `POST` `/api/post`
+
+Creates a new dweet and saves it to the Dwitter database
+
+JSON body properties:
+
+| Name      | Type     | Description                    |
+| --------- | -------- | ------------------------------ |
+| `user`    | `string` | Name of user posting the dweet |
+| `message` | `string` | Contents of the dweet          |
+
+Sample request body:
+
+```json
+{
+  "user": "Jim Ryan",
+  "message": "Deploy is my favorite course at HackCville"
+}
+```
+
+Sample response:
+
+```json
+{
+  "success": true,
+  "message": "Succesfully posted the dweet!"
+}
+```
+
+
 
 ## Submission requirements
 
