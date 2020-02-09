@@ -1,4 +1,4 @@
-# Week 3: Getting Started with Docker and Django
+# Week 3: Intro to Django!
 
 ## Goals:
 
