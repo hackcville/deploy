@@ -87,7 +87,7 @@ If all went well, you should see your index page successfully rendered at `local
 
 ## Additional tasks
 
-The above instructions should set up a baseline Django project. We'd also like you to complete the following tasks:
+The above instructions should set up a baseline Django project. We'd also like you to complete some additional tasks as well:
 
 - Implement at least two models (in `week2_app/models.py`) with some sort of relationship between them. Django has some great information on working with models in the [second part of their Django tutorial](https://docs.djangoproject.com/en/3.0/intro/tutorial02/).
 
@@ -97,7 +97,7 @@ The above instructions should set up a baseline Django project. We'd also like y
 
 - After creating models and saving some data to your database, render it in one of your templates. The [third part of the Django tutorial](https://docs.djangoproject.com/en/3.0/intro/tutorial03/) has some info on how to do this in your view functions.
 
-We understand this is quite a bit to do, but please take it step by step! Being able to understand all of these concepts will be super important in the coming weeks as we create more complex Django apps.
+**We know this is a lot - try your best to work through as much as you can!** This project will extend into week 4 as well (with some minor additional tasks), but we expect as least some progress for this week. Being able to understand all of these concepts will be super important in the coming weeks as we create more complex Django apps.
 
 ## Submission requirements
 
