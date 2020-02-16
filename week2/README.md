@@ -59,6 +59,12 @@ A couple things to note:
 
 - The last argument is the command we want to execute in our new container - in our case, `bash` so we can have a shell to execute commands in inside our container.
 
+
+Now, we can run the command to initialize the Django project.
+```
+django-admin startproject week2 .
+```
+
 If all went well, you should have a new folder called `week2` both inside your container and in your local project folder! You can exit your container using Control+D.
 
 ## Running our app
