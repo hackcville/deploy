@@ -77,3 +77,5 @@ ENTRYPOINT ["./entrypoint.sh"]
 - The database options like `SQL_USER` are arbitrary - as long as they match between the `web` and `db` environment variables, you can choose anything. We don't care about making these secure since the database isn't accessible from outside of Docker.
 
 - You may also notice that migrations are automatically run when the `web` service starts. This is because `python manage.py migrate` is included in `entrypoint.sh` - this isn't required but is definitely more convenient than having to run migrations manually.
+
+- If you try to `docker-compose exec web bash`, you may notice that you get an error. This is because Alpine Linux (what our `web` service is based on) doesn't include bash by default. Instead, use `docker-compose exec web ash`.
