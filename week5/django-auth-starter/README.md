@@ -14,7 +14,10 @@ git pull
 # copy week5/django-auth-starter to somewhere on your computer
 # or just run right from the cloned deploy folder
 cd week5/django-auth-starter
+
 docker-compose up
+# run migrations!
+docker-compose exec web python manage.py migrate
 ```
 
 ## Adding to your project
