@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Home</h2>
+  <p>Your username is {{ user.get_username }}.</p>
+  <p>You should only see this page if you're successfully logged in.</p>
+  <a href="{% url 'logout'%}">Log out</a>
+{% endblock %}
