@@ -11,6 +11,10 @@ git clone https://github.com/hackcville/deploy
 # copy week4/django-postgres-starter to somewhere on your computer
 # or just run right from the cloned deploy folder
 cd deploy/week4/django-postgres-starter
+
+# if you run into any permissions errors while running your web container, try this first:
+chmod +x entrypoint.sh
+
 docker-compose up
 ```
 
