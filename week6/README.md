@@ -1,4 +1,8 @@
+# Week 6: Intro to AWS!
+
 ## Lightsail Deployment
+
+We're going to start off by deploying to Lightsail, a simple VM-based hosting solution.
 
 ### Setting up a production Docker environment
 
