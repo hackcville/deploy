@@ -8,7 +8,7 @@ Each week's material will comprise of a workshop and lab. There will be a divers
 
 This class will primarily use Python, so a strong familiarity with the language is expected. We also suggest familiarity with Git and command line execution.
 
-The course project will be developed using Python, Django, MySQL and Docker and deployed onto AWS. A basic familiarity with HTML and CSS is preferred but not strictly required.
+The course project will be developed using Python, Django, PostgreSQL and Docker and deployed onto AWS. A basic familiarity with HTML and CSS is preferred but not strictly required.
 
 ## Course Materials
 
