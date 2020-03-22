@@ -75,7 +75,7 @@ chmod 400 LightsailDefaultKey-us-east-1.pem
 ssh -i LightsailDefaultKey-us-east-1.pem ubuntu@your_public_ip
 ```
 
-Once you're in your instance, `git clone` your project - it doesn't matter where, but by default you'll
+Once you're in your instance, `git clone` your project - it doesn't matter where, but by default you'll be in `~` (your home directory).
 
 ### Package setup
 
